@@ -29,7 +29,7 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            background-color: rgba(255, 255, 255, 0.8); /* Fondo blanco con opacidad */
+            background-color: rgba(255, 255, 255, 0.7); /* Fondo blanco con opacidad */
             padding: 40px; /* Aumenta el espacio interno */
             box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada */
             border-radius: 20px;
@@ -38,6 +38,10 @@
             transition: opacity 0.3s ease, visibility 0.3s ease;
             width: 80%; /* Aumenta el ancho del popup */
             max-width: 600px; /* Limita el ancho máximo del popup */
+            background-image: url('https://ideawallpapers.com/wp-content/uploads/2023/08/cinnamoroll-wallpapers-3.jpg'); /* Imagen de fondo del popup */
+            background-size: cover; /* Asegura que la imagen cubra el área del popup */
+            background-position: center; /* Centra la imagen en el popup */
+            background-repeat: no-repeat; /* Evita que la imagen se repita */
         }
 
         .popup.show {
@@ -51,12 +55,14 @@
             color: #ff77aa; /* Rosa pastel */
             margin-top: 0;
             letter-spacing: 1px;
+            position: relative; /* Asegura que el texto esté por encima del fondo */
         }
 
         .popup p {
             font-size: 24px; /* Aumenta el tamaño del texto */
             color: #75bbf0; /* Azul pastel */
             line-height: 1.5;
+            position: relative; /* Asegura que el texto esté por encima del fondo */
         }
 
         .popup button {
