@@ -9,13 +9,17 @@
 
         body {
             font-family: 'Poppins', sans-serif;
-            background-color: #f9a6e4;
+            background-color: #f9a6e4; /* Fondo rosa pastel */
+            background-image: url('https://img.freepik.com/free-vector/pink-neon-valentine-s-frame_53876-113800.jpg?t=st=1724395995~exp=1724399595~hmac=95d295f06df8f0fe78ff6a41697c6ff147f4d97df651d3e88860b618f59d1345&w=2000'); /* Imagen de fondo */
+            background-size: cover; /* Asegura que la imagen cubra toda la pantalla */
+            background-position: center; /* Centra la imagen en la pantalla */
+            background-repeat: no-repeat; /* Evita que la imagen se repita */
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
             margin: 0;
-            color: #ede7f7;
+            color: #ede7f7; /* Color del texto */
         }
 
         .popup {
@@ -26,12 +30,14 @@
             left: 50%;
             transform: translate(-50%, -50%);
             background-color: #fff;
-            padding: 30px;
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            padding: 40px; /* Aumenta el espacio interno */
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada */
             border-radius: 20px;
             text-align: center;
             z-index: 1000;
             transition: opacity 0.3s ease, visibility 0.3s ease;
+            width: 80%; /* Aumenta el ancho del popup */
+            max-width: 600px; /* Limita el ancho máximo del popup */
         }
 
         .popup.show {
@@ -41,32 +47,39 @@
 
         .popup h2 {
             font-family: 'Baloo 2', cursive;
-            font-size: 36px;
-            color: #ff77aa;
+            font-size: 48px; /* Aumenta el tamaño del texto */
+            color: #ff77aa; /* Rosa pastel */
             margin-top: 0;
+            letter-spacing: 1px;
         }
 
         .popup p {
-            font-size: 20px;
-            color: #75bbf0;
+            font-size: 24px; /* Aumenta el tamaño del texto */
+            color: #75bbf0; /* Azul pastel */
+            line-height: 1.5;
         }
 
         .popup button {
             margin-top: 20px;
-            padding: 12px 25px;
-            background-color: #ff77aa;
+            padding: 15px 30px; /* Aumenta el tamaño del botón */
+            background-color: #ff77aa; /* Rosa pastel */
             border: none;
             color: white;
             border-radius: 10px;
-            font-size: 18px;
+            font-size: 20px; /* Aumenta el tamaño del texto del botón */
             cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .popup button:hover {
+            background-color: #ffb3c6; /* Rosa más claro */
         }
 
         a {
             font-size: 40px;
             text-decoration: none;
-            color: #ab9ef3;
-            background-color: #ffd6e1;
+            color: #ab9ef3; /* Azul pastel */
+            background-color: #ffd6e1; /* Rosa pastel claro */
             padding: 20px 30px;
             border-radius: 15px;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
@@ -74,7 +87,7 @@
         }
 
         a:hover {
-            background-color: #ffb3c6;
+            background-color: #ffb3c6; /* Rosa más claro */
         }
 
         .overlay {
@@ -95,10 +108,10 @@
 </head>
 <body>
 
-<a href="#" onclick="showPopup()">Te tengo una sorpresita, haz click aquí  </a>
+<a href="#" onclick="showPopup()">Te tengo una sorpresita, haz click aquí</a>
 
 <div id="popup" class="popup">
-    <h2>Y si hacemos un muñecoo?</h2>
+    <h2>Y si hacemos un muñeco?</h2>
     <p>¡Cupón válido por un viaje a la nieve!</p>
     <button onclick="closePopup()">Cerrar</button>
 </div>
